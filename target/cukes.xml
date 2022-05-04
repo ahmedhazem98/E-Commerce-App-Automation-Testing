@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="239.584">
+<testcase classname="Add product to shopping cart" name="Logged user could add different products to Shopping cart" time="11.602">
+<system-out><![CDATA[Given user add mobile to cart then clicks on the product apple macbook......passed
+When user add it to the shopping cart.......................................passed
+Then item is added to the shopping cart and a confirmation message will be shown.passed
+]]></system-out>
+</testcase>
+<testcase classname="Add products to compare list" name="SC11- Logged user could add different products to compare list" time="12.14">
+<system-out><![CDATA[Given user clicks on the product apple macbook..............................passed
+When user added it to compare list..........................................passed
+Then user can add this item to the compare list and a confirmation message will be shown.passed
+]]></system-out>
+</testcase>
+<testcase classname="change the currency" name="Logged User could switch between currencies US-Euro" time="15.522">
+<system-out><![CDATA[When user selects currency drop list and chooses Euro.......................passed
+Then the price of the product appears in Euro...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to login" name="user login with valid username and password" time="14.948">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user enter valid username and password.................................passed
+Then user could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="order product successfully" name="Create successful Order" time="114.351">
+<system-out><![CDATA[Given user add apple macbook to shopping cart...............................passed
+When user go to shopping cart...............................................passed
+And update the shopping cart................................................passed
+And should continue with order..............................................passed
+And enters the shipping address and payment.................................passed
+Then user could order his product successfully..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration" name="user could register with valid data" time="13.856">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user clicks on register button........................................passed
+When enter Gender & First Name & Last Name & Email & Password...............passed
+Then registration is completed and success massage appears..................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepDefinition.RegistarationStepDefinition.RegisteredSuccessfully(RegistarationStepDefinition.java:36)
+	at ✽.registration is completed and success massage appears(file:///D:/COURSE/MAVENseleniumCucumber/src/main/resources/features/Registeration.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="Reset Password" name="user could be able to recover password by clicking on forgot password" time="8.51">
+<system-out><![CDATA[Given user click on forgot password.........................................passed
+When enter his or her email.................................................passed
+Then user receives a link and recover password..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be able to search for products with different parameters" name="user could search for product using fullname" time="7.807">
+<system-out><![CDATA[When user clicks on search field............................................passed
+And user search with name of product........................................passed
+Then user could find relative results.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select Category" name="Logged user could select different Categories" time="16.051">
+<system-out><![CDATA[When user hover at computer category and selects notebook...................passed
+Then user could see notebooks...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select Tags" name="Logged user could select different tags" time="9.116">
+<system-out><![CDATA[When user navigates to Apparel & shoes......................................passed
+Then user navigates to awesome tag..........................................passed
+And user could find all products under the awesome tag......................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could add products to wishlist" name="logged user add products to wishlist successfully" time="15.312">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@class=&quot;button-2 add-to-wishlist-button&quot;])[3]&quot;}&#10;  (Session info: chrome=100.0.4896.127)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'AHMEDHAZEM', ip: '192.168.125.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [6b637422ed657eafe625dc6c3f224bc2, findElement {using=xpath, value=(//button[@class=&quot;button-2 add-to-wishlist-button&quot;])[3]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AHMED1~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57455/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6b637422ed657eafe625dc6c3f224bc2" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to login page.................................................passed
+When user enter valid username and password.................................passed
+Then user could login successfully..........................................passed
+Given user add product to wishlist..........................................failed
+When user go to wishlist....................................................skipped
+And count number of quanataties.............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//button[@class="button-2 add-to-wishlist-button"])[3]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'AHMEDHAZEM', ip: '192.168.125.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6b637422ed657eafe625dc6c3f224bc2, findElement {using=xpath, value=(//button[@class="button-2 add-to-wishlist-button"])[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AHMED1~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57455/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6b637422ed657eafe625dc6c3f224bc2
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at stepDefinition.WishlistStepDefinition.wishlist_element(WishlistStepDefinition.java:13)
+	at ✽.user add product to wishlist(file:///D:/COURSE/MAVENseleniumCucumber/src/main/resources/features/wishlist.feature:10)
+]]></failure>
+</testcase>
+</testsuite>
